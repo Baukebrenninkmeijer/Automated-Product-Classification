@@ -1,4 +1,4 @@
-# Product Tagging in TAPP
+# Hierarchical Product Tagging
 
 Below is a detailed explanation of the algorithm and data flow of both the product training and prediction processes. The product tagging happens on a hierarchical basis, with a model for each level. This means there are 5 models, one for each of *group*, *category*, *subcategory*, *type* and *brand*.
 
@@ -85,8 +85,8 @@ The test set accuracy of the model for the five tasks is as follows:
 
 | task      | accuracy |
 |-----------|----------|
-|group        | 0.9463 |
-|category     | 0.9798 |
+| group       | 0.9463 |
+| category    | 0.9798 |
 | subcategory | 0.9738 |
 | type        | 0.9513 |
 | brand       | 0.9381 |
