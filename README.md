@@ -2,7 +2,7 @@
 
 Below is a detailed explanation of the algorithm and data flow of both the product training and prediction processes. The product tagging happens on a hierarchical basis, with a model for each level. This means there are 5 models, one for each of *group*, *category*, *subcategory*, *type* and *brand*.
 
-Additionally, there is a evaluator script. This is a combination of the two other scripts, making predictions on the data but also evaluation it against the hand labeled data. In essence, it is very similar to the training script if all data would be used as test set. Obviously, it also doesn't train any weights.
+Additionally, there is an evaluator script. This is a combination of the two other scripts, making predictions on the data but also evaluation it against the hand labeled data. In essence, it is very similar to the training script if all data would be used as test set. Obviously, it also doesn't train any weights.
 
 The classification relies on unit price, description and higher order tags. The hierarchical order for the tags is `group->category->subcategory->type->brand`.
 All textual data is converted to tokens. Most notably, the description is converted in a list, 11 tokens long. It is padded with zero values if it is shorter than 11 (which most are). This process is illustrated in the image below.
